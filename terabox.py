@@ -48,12 +48,12 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
-    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEMvQ9m0tXXcCr2ss_b0VcZbhPo-hqMjwACmgADyJRkFCxl4eFc7yVqNQQ")
+    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEMvjtm1Dx82zDGzSBwiiquwOH2Z9TqBAACjxAAAshNmVYFPD4yDH_fnjUE")
     await asyncio.sleep(2)
     await sticker_message.delete()
     user_mention = message.from_user.mention
     reply_message = f"ᴡᴇʟᴄᴏᴍᴇ, {user_mention}.\n\n🌟 ɪ ᴀᴍ ᴀ ᴛᴇʀᴀʙᴏx ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ. sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜɪɴ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ ✨."
-    join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/CKFLICKS")
+    join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/Dramaship")
     developer_button = InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Kichuxd")
     reply_markup = InlineKeyboardMarkup([[join_button, developer_button]])
     video_file_id = "/app/Jet-Mirror.mp4"
@@ -90,7 +90,7 @@ async def handle_message(client, message: Message):
     is_member = await is_user_member(client, user_id)
 
     if not is_member:
-        join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/+psu-1EKLufcyZGM9")
+        join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/Dramaship")
         reply_markup = InlineKeyboardMarkup([[join_button]])
         await message.reply_text("ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ.", reply_markup=reply_markup)
         return
