@@ -53,7 +53,7 @@ async def start_command(client, message):
     await sticker_message.delete()
     user_mention = message.from_user.mention
     reply_message = f"ᴡᴇʟᴄᴏᴍᴇ, {user_mention}.\n\n🌟 ɪ ᴀᴍ ᴀ ᴛᴇʀᴀʙᴏx ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ. sᴇɴᴅ ᴍᴇ ᴀɴʏ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ ɪ ᴡɪʟʟ ᴅᴏᴡɴʟᴏᴀᴅ ᴡɪᴛʜɪɴ ғᴇᴡ sᴇᴄᴏɴᴅs ᴀɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ ✨."
-    join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/Dramaship")
+    join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/Teraboxdev")
     developer_button = InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/TeraBoxDev")
     reply_markup = InlineKeyboardMarkup([[join_button, developer_button]])
     video_file_id = "/app/Jet-Mirror.mp4"
@@ -90,7 +90,7 @@ async def handle_message(client, message: Message):
     is_member = await is_user_member(client, user_id)
 
     if not is_member:
-        join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/Dramaship")
+        join_button = InlineKeyboardButton("ᴊᴏɪɴ ʜᴇʀᴇ", url="https://t.me/teraboxdev")
         reply_markup = InlineKeyboardMarkup([[join_button]])
         await message.reply_text("ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ ᴍʏ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ.", reply_markup=reply_markup)
         return
@@ -107,7 +107,7 @@ async def handle_message(client, message: Message):
         await message.reply_text("ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴀ ᴠᴀʟɪᴅ ᴛᴇʀᴀʙᴏx ʟɪɴᴋ.")
         return
 
-    reply_msg = await message.reply_text("ɪɴɪᴛɪᴀᴛɪɴɢ ᴅᴀᴛᴀ ᴇxᴛʀᴀᴄᴛɪᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴘʀᴏᴄᴇꜱꜱ ᴀᴄᴛɪᴠᴇ..........")
+    reply_msg = await message.reply_text("ᴅᴀᴛᴀ ᴇxᴛʀᴀᴄᴛɪᴏɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴘʀᴏᴄᴇꜱꜱ ᴀᴄᴛɪᴠᴇ..........")
 
     try:
         file_path, thumbnail_path, video_title = await download_video(terabox_link, reply_msg, user_mention, user_id)
