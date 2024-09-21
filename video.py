@@ -24,7 +24,7 @@ aria2.set_global_options(options)
 
 
 async def download_video(url, reply_msg, user_mention, user_id):
-    response = requests.get(f"https://mavimods.serv00.net/Mavitera?url={url}")
+    response = requests.get(f"https://teraboxvideodownloader.nepcoderdevs.workers.dev/?url={url}")
     response.raise_for_status()
     data = response.json()
 
@@ -150,7 +150,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
         uploaded = current
         percentage = (current / total) * 100
         elapsed_time_seconds = (datetime.now() - start_time).total_seconds()
-        
+
         if time.time() - last_update_time > 2:
             progress_text = format_progress_bar(
                 filename=video_title,
@@ -188,7 +188,7 @@ async def upload_video(client, file_path, thumbnail_path, video_title, reply_msg
         await message.delete()
 
     await reply_msg.delete()
-    sticker_message = await message.reply_sticker("CAACAgUAAxkBAAEMvRFm0tbe4xMGpaoSODRF1K7YSBqVOQACpAADyJRkFIBDD5aPWWn6NQQ")
+    sticker_message = await message.reply_sticker("CAACAgIAAxkBAAEZdwRmJhCNfFRnXwR_lVKU1L9F3qzbtAAC4gUAAj-VzApzZV-v3phk4DQE")
     os.remove(file_path)
     os.remove(thumbnail_path)
     await asyncio.sleep(5)
